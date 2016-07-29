@@ -21,7 +21,7 @@ export default class ContentEditable extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     return !this.htmlEl || nextProps.html !== this.htmlEl.innerHTML ||
-            this.props.disabled !== nextProps.disabled;
+            this.props.disabled !== nextProps.disabled || this.props.shouldAlwaysUpdate;
   }
 
   componentDidUpdate() {
